@@ -1,0 +1,45 @@
+/* Styles for Color Bar */
+.color-bar {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f4f4f4;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.color-bar.blur {
+    filter: blur(5px);
+    transition: filter 0.3s ease;
+}
+
+.color-bar p {
+    margin: 0 0 10px;
+    font-weight: bold;
+}
+
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+    gap: 5px;
+    justify-content: center;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.color {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    transition: border 0.3s;
+}
+
+.color:hover, .color.selected {
+    border: 2px solid #000;
+}
+
+#selected-color-text {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
